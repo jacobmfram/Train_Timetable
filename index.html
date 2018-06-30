@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/css/materialize.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.1.0/firebase.js"></script>
+    <title>Train Scheduler</title>
+</head>
+<body>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Train Name</th>
+                    <th>Destination</th>
+                    <th>Frequency</th>
+                    <th>Next Arrival</th>
+                    <th>Minutes Away</th>
+                </tr>
+            </thead>
+            <tbody id="train-table">
+            </tbody>
+        </table>
+        <br>
+        <a class="waves-effect waves-light btn" id="update">Update</a>
+        <br>
+        <div class="row">
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Train Name" id="train_name" type="text" class="validate">
+                        <label>Train Name</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Destination" id="destination" type="text" class="validate">
+                        <label>Destination</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="First Time" id="first_time" type="time" class="validate">
+                        <label>First Time (HH:MM - 24 hr clock)</label>
+                    </div>
+                </div>
+            </form>
+            <form class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input placeholder="Frequency" id="frequency" type="number" class="validate">
+                        <label>Frequency (min)</label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <a class="waves-effect waves-light btn" id="submit">Submit</a>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="logic.js"></script>
+    <script src="moment.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+</body>
+</html>
